@@ -18,17 +18,13 @@ namespace HowManyHoles
 
                 while ((line = reader.ReadLine()) != null)
                 {
-                    int holeCount = 0;
-                    //List<int> numListr = new List<int>(int.Parse(line));
-                    //int[] numbers = line.Split().Select(str => int.Parse(str)).ToArray();
-                    //string [] numList = line.Split().ToArray();
-                    //List<int> numList = line.Split().Select(Int32.Parse).ToList();
-                    int [] numbers = line.Select(c => c - '0').ToArray();
-                    //Console.WriteLine(numbers[1]);
 
-                    for(int i = 0; i <numbers.Length; i++)
+                    int holeCount = 0;
+                    int[] numbers = line.Select(c => c - '0').ToArray();
+
+                    for (int i = 0; i < numbers.Length; i++)
                     {
-                      
+
                         if (numbers[i] == 4)
                         {
                             holeCount += 1;
@@ -54,12 +50,12 @@ namespace HowManyHoles
                         {
                             continue;
                         }
-                       
                     }
-                    Console.WriteLine(holeCount);                  
-
+                    Console.WriteLine(holeCount);
                 }
+
             }
         }
     }
 }
+

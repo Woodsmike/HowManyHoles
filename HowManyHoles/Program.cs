@@ -19,29 +19,29 @@ namespace HowManyHoles
                 while ((line = reader.ReadLine()) != null)
                 {
 
-                    int holeCount = 0;
-                    int[] numbers = line.Select(c => c - '0').ToArray();
 
+                    char[] numbers = line.Select(i => i).ToArray();
+                    int holeCount = 0;
                     for (int i = 0; i < numbers.Length; i++)
                     {
 
-                        if (numbers[i] == 4)
+                        if (numbers[i] == '4')
                         {
                             holeCount += 1;
                         }
-                        else if (numbers[i] == 6)
+                        else if (numbers[i] == '6')
                         {
                             holeCount += 1;
                         }
-                        else if (numbers[i] == 8)
+                        else if (numbers[i] == '8')
                         {
                             holeCount += 2;
                         }
-                        else if (numbers[i] == 9)
+                        else if (numbers[i] == '9')
                         {
                             holeCount += 1;
                         }
-                        else if (numbers[i] == 0)
+                        else if (numbers[i] == '0')
                         {
                             holeCount += 1;
                         }
@@ -50,8 +50,10 @@ namespace HowManyHoles
                         {
                             continue;
                         }
+
                     }
                     Console.WriteLine(holeCount);
+
                 }
 
             }
